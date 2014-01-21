@@ -1,0 +1,4 @@
+Django==1.6.1
+django-tastypie==0.11.0
+django-uuidfield==0.4.0
+psycopg2==2.5.2
