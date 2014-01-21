@@ -23,3 +23,4 @@ DEVSERVER_MODULES = [
     'devserver.modules.sql.SQLSummaryModule',
 ]
 DEVSERVER_TRUNCATE_SQL = False
+STATIC_ROOT = '/home/matt/Envs/planecrash/lib/python2.7/site-packages/django/contrib/admin/static/admin/'
