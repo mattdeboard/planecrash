@@ -3,7 +3,10 @@ BASE_DIR = osp.abspath(osp.join(osp.dirname(osp.dirname(__file__)), '..'))
 SECRET_KEY = 'urk0wu4uo@5a#29a2h@@msckvm67)-35hkfeu9q%7t6ijhdye^'
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'chrome-extension://knjakhddgpokehcmdjgjpoognlfjiono',
+    '.newsblur.com'
+]
 
 INSTALLED_APPS = (
     'django.contrib.admin',
