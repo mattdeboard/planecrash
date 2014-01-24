@@ -1,6 +1,16 @@
 import os.path as osp
 BASE_DIR = osp.abspath(osp.join(osp.dirname(osp.dirname(__file__)), '..'))
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'planecrash',
+        'HOST': 'planecrash.c5sy9he6ikco.us-west-2.rds.amazonaws.com',
+        'PORT': '5432',
+        'USER': 'celeb_pc',
+        'PASSWORD': 'b88GIln603Jv'
+    }
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
