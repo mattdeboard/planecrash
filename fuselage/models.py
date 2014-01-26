@@ -21,3 +21,12 @@ class Article(models.Model):
 
     class Meta:
         db_table = 'articles'
+
+
+class Category(models.Model):
+    seats = models.IntegerField()
+    title = models.CharField(max_length=20, db_index=True, unique=True)
+    priority = models.IntegerField()
+
+    class Meta:
+        db_table = 'categories'
