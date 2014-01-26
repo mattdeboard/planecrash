@@ -5,8 +5,9 @@ from uuidfield import UUIDField
 
 CATEGORIES = (
     ('cockpit', 'Cockpit'),
-    ('business', 'Business'),
-    ('economy', 'Economy'),
+    ('first', 'First Class'),
+    ('business', 'Business Class'),
+    ('coach', 'Coach'),
 )
 
 
