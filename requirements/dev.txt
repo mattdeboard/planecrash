@@ -1,4 +1,5 @@
 -r prod.txt
 Fabric==1.6.1
+South==0.8.4
 ipdb
 git+git://github.com/dcramer/django-devserver#egg=django-devserver
