@@ -15,7 +15,8 @@ class Article(models.Model):
     article_uid = UUIDField(auto=True)
     category = models.CharField(max_length=20, choices=CATEGORIES)
     created = models.DateTimeField(auto_now=True, auto_now_add=True)
-    headline = models.CharField(max_length=1000)
+    original_headline = models.CharField(max_length=1000)
+    new_headline = models.CharField(max_length=1000, null=True)
     modified = models.DateTimeField(auto_now=True)
     url = models.URLField(max_length=2000, unique=True)
 
