@@ -8,6 +8,6 @@ env.roledefs.update({
 
 @roles('prod')
 def push_code():
-    sudo('supervisorctl stop planecrash')
+    local('find ../ -name "*.pyc" -type f -print0 | xargs -0 rm')
     put('../*', '/opt/apps/planecrash')
-    sudo('supervisorctl start planecrash')
+    sudo('touch /opt/apps/planecrash/uwsgi-planecrash.ini')
