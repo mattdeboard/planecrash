@@ -31,7 +31,7 @@
     },
     {
         "model": "fuselage.category",
-        "pk": 1,
+        "pk": 4,
         "fields": {
             "title": "Coach",
             "short_name": "coach",

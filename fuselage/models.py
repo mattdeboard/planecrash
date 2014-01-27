@@ -3,14 +3,6 @@ from django.db import models
 from uuidfield import UUIDField
 
 
-CATEGORIES = (
-    ('cockpit', 'Cockpit'),
-    ('first', 'First Class'),
-    ('business', 'Business Class'),
-    ('coach', 'Coach'),
-)
-
-
 class Article(models.Model):
     article_uid = UUIDField(auto=True)
     category = models.ForeignKey('Category', null=True)
