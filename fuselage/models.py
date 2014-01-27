@@ -15,7 +15,7 @@ class Article(models.Model):
     class Meta:
         db_table = 'articles'
 
-    def __repr__(self):
+    def __unicode__(self):
         return "<Article: uuid:%s>" % self.article_uid
 
 
@@ -29,5 +29,5 @@ class Category(models.Model):
         db_table = 'categories'
         verbose_name_plural = 'Categories'
 
-    def __repr__(self):
+    def __unicode__(self):
         return "<Category: %s>" % self.title
