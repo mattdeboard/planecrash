@@ -1,0 +1,42 @@
+[
+    {
+        "model": "fuselage.category",
+        "pk": 1,
+        "fields": {
+            "title": "Cockpit",
+            "short_name": "cockpit",
+            "priority": 1,
+            "seats": 2
+        }
+    },
+    {
+        "model": "fuselage.category",
+        "pk": 2,
+        "fields": {
+            "title": "First Class",
+            "short_name": "first",
+            "priority": 2,
+            "seats": 10
+        }
+    },
+    {
+        "model": "fuselage.category",
+        "pk": 3,
+        "fields": {
+            "title": "Business Class",
+            "short_name": "business",
+            "priority": 3,
+            "seats": 10
+        }
+    },
+    {
+        "model": "fuselage.category",
+        "pk": 1,
+        "fields": {
+            "title": "Coach",
+            "short_name": "coach",
+            "priority": 4,
+            "seats": 10
+        }
+    }
+]
