@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     pc.vm.host_name = "planecrash.local"
     pc.vm.network :private_network, ip: "10.10.10.100"
     pc.vm.network :forwarded_port, host: 8900, guest: 8900 # apache
+    pc.vm.network :forwarded_port, host: 7432, guest: 5432 # apache
 
     pc.vm.provider "virtualbox" do |vb|
       vb.customize ["modifyvm", :id, "--memory", "1024"]

@@ -5,8 +5,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'planecrash',
-        'HOST': 'util.local',
-        'PORT': '6432',
+        'HOST': 'planecrash.local',
+        'PORT': '5432',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
     }
