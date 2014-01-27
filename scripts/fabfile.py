@@ -9,5 +9,5 @@ env.roledefs.update({
 @roles('prod')
 def push_code():
     sudo('supervisorctl stop planecrash')
-    put('../*', '/tmp')
+    put('../*', '/opt/apps/planecrash')
     sudo('supervisorctl start planecrash')

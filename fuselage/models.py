@@ -15,6 +15,9 @@ class Article(models.Model):
     class Meta:
         db_table = 'articles'
 
+    def __repr__(self):
+        return "<Article: uuid:%s>" % self.article_uid
+
 
 class Category(models.Model):
     seats = models.IntegerField()
@@ -25,3 +28,6 @@ class Category(models.Model):
     class Meta:
         db_table = 'categories'
         verbose_name_plural = 'Categories'
+
+    def __repr__(self):
+        return "<Category: %s>" % self.title
