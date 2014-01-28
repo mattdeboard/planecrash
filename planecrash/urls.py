@@ -11,7 +11,8 @@ api.register(ArticleResource())
 api.register(CategoryResource())
 urlpatterns = patterns(
     '',
-    (r'^', include(api.urls)),
+    (r'^', 'fuselage.views.index'),
+    (r'^%s/' % api.api_name, include(api.urls)),
     url(r'^admin/', include(admin.site.urls)))
 
 urlpatterns += static.static('/static/admin/',
