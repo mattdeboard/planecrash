@@ -4,13 +4,15 @@
     <head>
     </head>
     <body>
+        <h1>Celebrity Planecrash</h1>
         {% for category, article_list in articles.items %}
         <section class="pc-column" id="{{ category }}">
-            <h1 class="pc-column-header" id="{{ category }}">
+            <h2 class="pc-column-header" id="{{ category }}">
                 {% get_category_title article_list %}
-            </h1>
+            </h2>
             <ul class="pc-list" id="{{ category }}">
                 {% for article in article_list %}
+                {% if article.priority %}
                 <li class="pc-link" id="{{ article.article_uid }}">
                     <a href="{{ article.url }}" target="_blank">
                         {% if article.new_headline %}
@@ -20,6 +22,7 @@
                         {% endif %}
                     </a>
                 </li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </section>

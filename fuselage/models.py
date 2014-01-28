@@ -18,6 +18,7 @@ class ArticleManager(models.Manager):
         qs = super(ArticleManager, self).get_queryset()\
                                         .select_related('category')\
                                         .filter(category=category)\
+                                        .exclude(priority=None)\
                                         .order_by('priority')
         return qs[:category.seats]
 
