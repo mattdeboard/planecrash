@@ -4,7 +4,7 @@ from uuidfield import UUIDField
 
 
 class ArticleManager(models.Manager):
-    def by_category(self, short_name, exclude_unprioritized=True):
+    def by_category(self, short_name, include_unprioritized=False):
         """Retrieve all the articles for a given category short name.
 
         This differs from the standard
@@ -20,7 +20,7 @@ class ArticleManager(models.Manager):
                                         .filter(category=category)\
                                         .order_by('priority')
 
-        if exclude_unprioritized:
+        if not include_unprioritized:
             qs = qs.exclude(priority=None)
 
         return qs[:category.seats]

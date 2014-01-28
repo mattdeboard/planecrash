@@ -15,8 +15,11 @@ def index(request):
     articles = OrderedDict()
     categories = Category.objects.values_list('short_name', flat=True)\
                                  .order_by('priority')
+    can_change = request.user.has_perm('fuselage.change_article')
+
     for cat in categories:
-        _articles = Article.objects.by_category(cat)
+        _articles = Article.objects.by_category(
+            cat, include_unprioritized=can_change)
 
         if _articles.count():
             articles[cat] = _articles

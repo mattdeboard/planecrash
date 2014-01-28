@@ -12,17 +12,23 @@
             </h2>
             <ul class="pc-list" id="{{ category }}">
                 {% for article in article_list %}
-                {% if article.priority %}
                 <li class="pc-link" id="{{ article.article_uid }}">
-                    <a href="{{ article.url }}" target="_blank">
-                        {% if article.new_headline %}
-                        {{ article.new_headline }}
-                        {% else %}
-                        {{ article.original_headline }}
+                    <article class="pc-link" id="{{ article.article_uid }}">
+                        <a href="{{ article.url }}" target="_blank">
+                            {% if article.new_headline %}
+                            {{ article.new_headline }}
+                            {% else %}
+                            {{ article.original_headline }}
+                            {% endif %}
+                        </a>
+                        {% if perms.fuselage.change_article %}
+                        <input type="text" name="pc-priority" size="4"
+                               id="{{ article.article.uid }}"
+                               value="{{ article.priority }}"
+                               placeholder="Article priority">
                         {% endif %}
-                    </a>
+                    </article>
                 </li>
-                {% endif %}
                 {% endfor %}
             </ul>
         </section>
