@@ -4,6 +4,15 @@
     <head>
     </head>
     <body>
+        <div class="header">
+            <header>
+                <div>
+                    Welcome back, {{ user.username }}.
+                    <button>Save</button>
+                    <a href="/admin/" target="_blank">Go To Admin</a>
+                </div>
+            </header>
+        </div>
         <h1>Celebrity Planecrash</h1>
         {% for category, article_list in articles.items %}
         <section class="pc-column" id="{{ category }}">
