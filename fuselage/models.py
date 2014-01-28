@@ -33,7 +33,7 @@ class Article(models.Model):
     modified = models.DateTimeField(auto_now=True)
     new_headline = models.CharField(max_length=1000, null=True, blank=True)
     original_headline = models.CharField(max_length=1000)
-    priority = models.IntegerField(null=True)
+    priority = models.IntegerField(null=True, blank=True)
     url = models.URLField(max_length=2000, unique=True)
 
     objects = ArticleManager()
