@@ -24,3 +24,6 @@ DEVSERVER_MODULES = [
 ]
 DEVSERVER_TRUNCATE_SQL = False
 STATIC_ROOT = '/home/matt/Envs/planecrash/lib/python2.7/site-packages/django/contrib/admin/static/admin/'
+STATICFILES_DIRS = (
+    '%s/static/',
+)

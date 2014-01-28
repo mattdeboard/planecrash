@@ -17,5 +17,8 @@ urlpatterns = patterns(
 )
 
 
+# These URLs will be intercepted by the web server in production.
 urlpatterns += static.static('/static/admin/',
                              document_root=settings.STATIC_ROOT)
+urlpatterns += static.static('/static/',
+                             document_root='%s/static/' % settings.BASE_DIR)

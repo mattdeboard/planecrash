@@ -1,18 +1,21 @@
 {% load tags %}
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
     <head>
+        <script data-main="{% static "fuselage/js/app.js" %}"
+                src="{% static "fuselage/js/require.js" %}"></script>
     </head>
     <body>
-        <div class="header">
-            <header>
-                <div>
-                    Welcome back, {{ user.username }}.
-                    <button>Save</button>
-                    <a href="/admin/" target="_blank">Go To Admin</a>
-                </div>
-            </header>
-        </div>
+        <!-- <div class="header">
+         !--     <header>
+         !--         <div>
+         !--             Welcome back, {{ user.username }}.
+         !--             <button id="pc-save-changes">Save</button>
+         !--             <a href="/admin/" target="_blank">Go To Admin</a>
+         !--         </div>
+         !--     </header>
+         !-- </div> -->
         <h1>Celebrity Planecrash</h1>
         {% for category, article_list in articles.items %}
         <section class="pc-column" id="{{ category }}">
@@ -21,8 +24,8 @@
             </h2>
             <ul class="pc-list" id="{{ category }}">
                 {% for article in article_list %}
-                <li class="pc-link" id="{{ article.article_uid }}">
-                    <article class="pc-link" id="{{ article.article_uid }}">
+                <li class="pc-link" id="{{ article.id }}">
+                    <article class="pc-link" id="{{ article.id }}">
                         <a href="{{ article.url }}" target="_blank">
                             {% if article.new_headline %}
                             {{ article.new_headline }}
@@ -30,12 +33,12 @@
                             {{ article.original_headline }}
                             {% endif %}
                         </a>
-                        {% if perms.fuselage.change_article %}
-                        <input type="text" name="pc-priority" size="4"
-                               id="{{ article.article.uid }}"
-                               value="{{ article.priority }}"
-                               placeholder="Article priority">
-                        {% endif %}
+                        <!-- {% if perms.fuselage.change_article %}
+                         !-- <input type="text" name="pc-priority" size="4"
+                         !--        id="{{ article.id }}"
+                         !--        value="{{ article.priority }}"
+                         !--        placeholder="Article priority">
+                         !-- {% endif %} -->
                     </article>
                 </li>
                 {% endfor %}
