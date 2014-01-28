@@ -7,7 +7,7 @@ ALLOWED_HOSTS = [
     'chrome-extension://knjakhddgpokehcmdjgjpoognlfjiono',
     '.newsblur.com'
 ]
-
+LOGIN_URL = 'http://celebrityplanecrash.com'
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',

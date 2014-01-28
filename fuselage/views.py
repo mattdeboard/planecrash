@@ -1,5 +1,6 @@
 from collections import OrderedDict
 
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.decorators.http import require_http_methods
@@ -7,6 +8,7 @@ from django.views.decorators.http import require_http_methods
 from .models import Article, Category
 
 
+@login_required
 @require_http_methods(["GET"])
 def index(request):
     # Keeping this dead simple for now: one query per category.

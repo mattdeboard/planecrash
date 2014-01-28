@@ -11,7 +11,7 @@ DATABASES = {
         'PASSWORD': 'postgres',
     }
 }
-
+LOGIN_URL = '/admin/'
 INSTALLED_APPS += ('devserver',)
 MIDDLEWARE_CLASSES += ('devserver.middleware.DevServerMiddleware',)
 DEVSERVER_ARGS = [
