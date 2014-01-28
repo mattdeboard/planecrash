@@ -28,7 +28,7 @@ class Article(models.Model):
     category = models.ForeignKey('Category', null=True)
     created = models.DateTimeField(auto_now=True, auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    new_headline = models.CharField(max_length=1000, null=True)
+    new_headline = models.CharField(max_length=1000, null=True, blank=True)
     original_headline = models.CharField(max_length=1000)
     priority = models.IntegerField(null=True)
     url = models.URLField(max_length=2000, unique=True)
