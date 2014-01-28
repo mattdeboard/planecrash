@@ -8,6 +8,7 @@ ALLOWED_HOSTS = [
     '.newsblur.com'
 ]
 LOGIN_URL = 'http://celebrityplanecrash.com'
+SESSION_COOKIE_DOMAIN = '.celebrityplanecrash.com'
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
