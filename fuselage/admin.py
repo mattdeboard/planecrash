@@ -16,6 +16,7 @@ admin.site.register(Article, ArticleAdmin)
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title', 'priority', 'short_name', 'seats')
+    list_editable = ('priority', 'seats')
     ordering = ('priority',)
 
 admin.site.register(Category, CategoryAdmin)
